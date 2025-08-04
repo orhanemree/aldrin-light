@@ -24,6 +24,7 @@ int main() {
 }
 ```
 Output (after `.ppm` converted to `.jpg`):
+
 <img src="out/hello_world.jpg">
 
 ## Documentation
