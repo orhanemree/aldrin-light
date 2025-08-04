@@ -1,4 +1,4 @@
-# Aldrin Light
+# 🔆 Aldrin Light
 * Very basic 2D computer graphics library in C. A lightweight version of [orhanemree/aldrin](https://github.com/orhanemree/aldrin).
 
 ## Quick Start
