@@ -30,8 +30,8 @@ typedef struct Aldrin_Canvas {
 
 
 void aldrin_put_pixel(Aldrin_Canvas ac, uint32_t x, uint32_t y, uint32_t color) {
-    if (y > ac.height) return;
-    if (x > ac.width) return;
+    if (y >= ac.height) return;
+    if (x >= ac.width) return;
     ac.pixels[(y*ac.width) + x] = color;
 }
 
