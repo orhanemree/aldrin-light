@@ -34,7 +34,7 @@ Output (after `.ppm` converted to `.jpg`):
 // wasm.c
 #include "lib/aldrin-light.c"
 
-#define WIDTH 200 //pre-set width and height!
+#define WIDTH 200 // pre-set width and height!
 #define HEIGHT 200
 
 static uint32_t pixels[WIDTH*HEIGHT];
