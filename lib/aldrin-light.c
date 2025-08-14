@@ -97,6 +97,27 @@ void aldrin_draw_line(Aldrin_Canvas ac, uint32_t x0, uint32_t y0,
 }
 
 
+void aldrin_draw_line_from_equation(Aldrin_Canvas ac, double m, double c, uint32_t color) {
+    if (m >= -1 && m <= 1) {
+        // horizontal-ish line
+        for (int xi = 0; xi < ac.width; ++xi) {
+            int yi = m*xi+c;
+            if (yi >= 0 && yi <= ac.height) {
+                aldrin_put_pixel(ac, xi, yi, color);
+            }
+        } 
+    } else {
+        // vertical-ish line
+        for (int yi = 0; yi < ac.height; ++yi) {
+            int xi = (yi-c)/m;
+            if (xi >= 0 && xi <= ac.width) {
+                aldrin_put_pixel(ac, xi, yi, color);
+            }
+        }
+    }
+}
+
+
 void aldrin_fill_triangle(Aldrin_Canvas ac, uint32_t x0, uint32_t y0,
         uint32_t x1, uint32_t y1, uint32_t x2, uint32_t y2, uint32_t color) {
     // scanline triangle fill algorthim
